@@ -1,0 +1,22 @@
+@import url('https://fonts.googleapis.com/css2?family=Lexend:wght@100..900&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --color-primary: #006DFF;
+  --color-secondary: #8A0AFF;
+  --color-text-primary: white;
+  --color-text-secondary: black;
+  --font-default: "Lexend", sans-serif;
+  --animate-fade-in: fadeIn 0.3s ease-in-out;
+}
+* {
+  font-family: var(--font-default);
+}
+@keyframes fadeIn {
+ 0%{
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+ }
