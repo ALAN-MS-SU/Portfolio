@@ -4,10 +4,23 @@ export class Project {
   Name: string;
   Describe: string;
   Photo: StaticImageData | string;
-  constructor(Name: string, Describe: string, Photo: StaticImageData | string) {
+  Repository: string;
+  Type: "Web" | "API" | "Mobile";
+  Language: React.ReactNode;
+  constructor(
+    Name: string,
+    Describe: string,
+    Photo: StaticImageData | string,
+    Repository: string,
+    Type: "Web" | "API" | "Mobile",
+    Language: React.ReactNode
+  ) {
     this.Name = Name;
     this.Describe = Describe;
     this.Photo = Photo;
+    this.Language = Language;
+    this.Repository = Repository;
+    this.Type = Type;
   }
 }
 export class Web extends Project {
@@ -16,9 +29,12 @@ export class Web extends Project {
     Name: string,
     Describe: string,
     Photo: StaticImageData | string,
+    Language: React.ReactNode,
+    Repository: string,
+    Type: "Web" | "API" | "Mobile",
     URL?: string
   ) {
-    super(Name, Describe, Photo);
+    super(Name, Describe, Photo, Repository, Type, Language);
     this.URL = URL;
   }
 }
@@ -28,9 +44,12 @@ export class Mobile extends Project {
     Name: string,
     Describe: string,
     Photo: StaticImageData | string,
+    Language: React.ReactNode,
+    Repository: string,
+    Type: "Web" | "API" | "Mobile",
     Dowload?: string
   ) {
-    super(Name, Describe, Photo);
+    super(Name, Describe, Photo, Repository, Type, Language);
     this.Dowload = Dowload;
   }
 }
@@ -40,9 +59,12 @@ export class API extends Project {
     Name: string,
     Describe: string,
     Photo: StaticImageData | string,
+    Language: React.ReactNode,
+    Repository: string,
+    Type: "Web" | "API" | "Mobile",
     ViewTest?: string
   ) {
-    super(Name, Describe, Photo);
+    super(Name, Describe, Photo, Repository, Type, Language);
     this.ViewTest = ViewTest;
   }
 }
