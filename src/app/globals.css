@@ -18,22 +18,4 @@
 .te{
   color:#F5EBDD;
 }
-@keyframes fadeIn {
-  0% {
-    opacity: 0;
-  }
-  100% {
-    opacity: 1;
-  }
-}
-@keyframes Test {
-  0% {
-    transform: rotateX(0deg);
-  }
-  50% {
-    transform: rotateX(-20deg);
-  }
-  100% {
-    transform: rotateX(0deg);
-  }
-}
+
