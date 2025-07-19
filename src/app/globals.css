@@ -2,15 +2,21 @@
 @import "tailwindcss";
 
 @theme {
-  --color-primary: #006dff;
+  --color-primary: #0756bd;
   --color-secondary: #8a0aff;
   --color-text-primary: white;
   --color-text-secondary: black;
+  --color-body: #F5EBDD;
   --font-default: "Lexend", sans-serif;
   --animate-fade-in: fadeIn 0.3s ease-in-out;
+
 }
 * {
+  box-sizing: border-box;
   font-family: var(--font-default);
+}
+.te{
+  color:#F5EBDD;
 }
 @keyframes fadeIn {
   0% {
