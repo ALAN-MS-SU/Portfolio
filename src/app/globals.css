@@ -9,13 +9,9 @@
   --color-body: #F5EBDD;
   --font-default: "Lexend", sans-serif;
   --animate-fade-in: fadeIn 0.3s ease-in-out;
-
 }
 * {
   box-sizing: border-box;
   font-family: var(--font-default);
-}
-.te{
-  color:#F5EBDD;
 }
 
