@@ -9,7 +9,7 @@ export async function Tittle({ Name, Photo }: Pick<Project, "Name" | "Photo">) {
         alt="Cover"
         className="w-full h-[45vh] border-b-8 border-text-secondary mb-8"
       />
-      <h1 className="text-6xl text-center font-bold">{Name}</h1>
+      <h1 className="md:text-6xl text-3xl text-center font-bold">{Name}</h1>
     </div>
   );
 }

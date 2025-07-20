@@ -7,7 +7,7 @@ export async function Links({
   Download,
 }: Pick<Project, "Repository"> & Pick<Web, "URL"> & Pick<Mobile, "Download">) {
   return (
-    <div className="flex flex-row justify-center items-center gap-[100px] m-[20px]">
+    <div className="flex md:flex-row flex-col justify-center items-center md:gap-[100px] gap-[0px] md:gap-y-[0px] gap-y-[30px] mb-[20px]">
       <LinkStyle Href={Repository} Text="View Repository" />
 
       {URL && <LinkStyle Href={URL} Text="View Site" Black />}
