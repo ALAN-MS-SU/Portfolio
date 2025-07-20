@@ -11,9 +11,7 @@ export async function Links({
       <LinkStyle Href={Repository} Text="View Repository" />
 
       {URL && <LinkStyle Href={URL} Text="View Site" Black />}
-      {Download && (
-        <LinkStyle Href={Download} Text="Download APK" />
-      )}
+      {Download && <LinkStyle Href={Download} Text="Download APK" />}
     </div>
   );
 }
