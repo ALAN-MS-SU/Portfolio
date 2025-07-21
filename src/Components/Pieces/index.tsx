@@ -1,6 +1,6 @@
 export * from "./Header";
 export * from "./Box/Box";
-export * from "./Box/View";
+export * from "./User/ProjectSection";
 export * from "./Project/Tittle";
 export * from "./Shared/Link";
 export * from "./Project/Tags";
@@ -8,3 +8,4 @@ export * from "./Project/Describe";
 export * from "./Project/Links";
 export * from "./User/UserSection";
 export * from "./Shared/HR";
+export * from "./User/SocialMedia";

@@ -1,4 +1,4 @@
-import { Header, HR, UserSection, ViewProjects } from "@/Components/Pieces";
+import { Header, HR, SocialMedia, UserSection, ViewProjects } from "@/Components/Pieces";
 export async function HomePage() {
   return (
     <>
@@ -6,6 +6,8 @@ export async function HomePage() {
       <UserSection />
       <HR />
       <ViewProjects />
+      <HR />
+      <SocialMedia />
     </>
   );
 }
