@@ -2,15 +2,24 @@
 @import "tailwindcss";
 
 @theme {
-  --color-primary: #2a3fa5;
-  --color-secondary: #7b33e0;
-  --color-text-primary: white;
-  --color-text-secondary: black;
+  --color-primary: #7b33e0;
+  --color-text-primary: black;
+  --color-text-secondary: white;
   --color-body: #f5ebdd;
   --font-default: "Lexend", sans-serif;
-  --animate-fade-in: fadeIn 0.3s ease-in-out;
+  --animate-fade-in: FadeIn 1s ease-in-out forwards;
 }
 * {
   box-sizing: border-box;
   font-family: var(--font-default);
+}
+@keyframes FadeIn {
+  0% {
+    opacity: 0%;
+    transform: translateX(-10%);
+  }
+  100% {
+    opacity: 100%;
+    transform: translateX(0%);
+  }
 }
