@@ -3,7 +3,7 @@ import { GitUser } from "@/Constants";
 export async function UserSection() {
   const { Name, PhotoUrl, Describe } = GitUser;
   return (
-    <section className="flex flex-row justify-center items-center gap-[300px] mt-[30px] animate-fade-in">
+    <section className="flex flex-row justify-center items-center gap-[300px] mt-[30px] animate-user">
       <div className="flex flex-col justify-center items-center">
         <Image
           src={PhotoUrl}

@@ -7,13 +7,31 @@
   --color-text-secondary: white;
   --color-body: #f5ebdd;
   --font-default: "Lexend", sans-serif;
-  --animate-fade-in: FadeIn 1s ease-in-out forwards;
+  --animate-user: User 1s ease-in-out forwards;
+  --animate-box-in: BoxIn 1s ease-in-out forwards;
+  --animate-box-out: BoxOut 1s ease-in-out forwards;
+}
+.ButtonOn {
+  color: var(--color-text-secondary);
+  background-color: var(--color-primary);
+  border-color: transparent;
+}
+.ButtonOff {
+  color: var(--color-text-primary);
+  background-color: transparent;
+  border-color: var(--color-primary);
+}
+.ButtonOff:hover{
+  color: var(--color-text-secondary);
+  background-color: var(--color-primary);
+  border-color: transparent;
 }
 * {
+  scroll-behavior: smooth;
   box-sizing: border-box;
   font-family: var(--font-default);
 }
-@keyframes FadeIn {
+@keyframes User {
   0% {
     opacity: 0%;
     transform: translateX(-10%);
@@ -21,5 +39,21 @@
   100% {
     opacity: 100%;
     transform: translateX(0%);
+  }
+}
+@keyframes BoxIn {
+  0% {
+    opacity: 0%;
+  }
+  100% {
+    opacity: 100%;
+  }
+}
+@keyframes BoxOut {
+  0% {
+    opacity: 100%;
+  }
+  100% {
+    opacity: 0%;
   }
 }

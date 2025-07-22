@@ -5,7 +5,7 @@ import { useRouter } from "next/navigation";
 export function Box({ Project, ID }: { Project: Project; ID: number }) {
   const router = useRouter();
   return (
-    <div className="group/animate xl:w-[390px] xl:h-[390px] md:w-[475px] md:h-[475px] sm:w-[400px] sm:h-[400px] w-[290px] h-[290px] hover:scale-106 transition-all cursor-pointer perspective-midrange duration-[.5s]">
+    <div className="group/animate xl:w-[390px] xl:h-[390px] md:w-[400px] md:h-[400px] w-[290px] h-[290px] hover:scale-106 transition-all cursor-pointer perspective-midrange duration-[.5s]">
       <div
         className="group-hover/animate:rotate-x-[10deg] transition-all duration-[.5s] shadow-lg shadow-primary group-hover/animate:shadow-2xl"
         onClick={() => {

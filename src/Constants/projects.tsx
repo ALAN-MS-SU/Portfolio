@@ -4,6 +4,7 @@ import Urna from "@/Assets/Photos/Urna.png";
 import Calendar from "@/Assets/Photos/Etec-Calendar.png";
 const TS = "TS";
 const CS = "C#";
+export const LengthDiv = 3;
 export const projects: (Web | Mobile)[] = [
   {
     Name: "User Control",
@@ -47,6 +48,48 @@ export const projects: (Web | Mobile)[] = [
     Technology: "NextJS",
     Team: false,
     API: true,
+  },
+  {
+    Name: "User Control",
+    Describe:
+      "\tProject to control user entry and exit, using back-end with JS/TS to do the connect with Postgresql database and to manage JWT tokens for level access control for each user. The Project has two level access user and admin, users can view other users and edit their own information, admins can perform all users functions and they can also remove other users from the list, but only if the other user isn't an admin.",
+    Photo: UserControl,
+    Language: TS,
+    Type: "Web",
+    Repository: "https://github.com/ALAN-MS-SU/User-Control/tree/main",
+    Year: "2024",
+    Technology: "NextJS",
+    API: true,
+    Team: false,
+    URL: "https://usercontrol.vercel.app",
+  },
+  {
+    Name: "User Control",
+    Describe:
+      "\tProject to control user entry and exit, using back-end with JS/TS to do the connect with Postgresql database and to manage JWT tokens for level access control for each user. The Project has two level access user and admin, users can view other users and edit their own information, admins can perform all users functions and they can also remove other users from the list, but only if the other user isn't an admin.",
+    Photo: UserControl,
+    Language: TS,
+    Type: "Web",
+    Repository: "https://github.com/ALAN-MS-SU/User-Control/tree/main",
+    Year: "2024",
+    Technology: "NextJS",
+    API: true,
+    Team: false,
+    URL: "https://usercontrol.vercel.app",
+  },
+  {
+    Name: "User Control",
+    Describe:
+      "\tProject to control user entry and exit, using back-end with JS/TS to do the connect with Postgresql database and to manage JWT tokens for level access control for each user. The Project has two level access user and admin, users can view other users and edit their own information, admins can perform all users functions and they can also remove other users from the list, but only if the other user isn't an admin.",
+    Photo: UserControl,
+    Language: TS,
+    Type: "Web",
+    Repository: "https://github.com/ALAN-MS-SU/User-Control/tree/main",
+    Year: "2024",
+    Technology: "NextJS",
+    API: true,
+    Team: false,
+    URL: "https://usercontrol.vercel.app",
   },
   // {
   //   Name: "API",

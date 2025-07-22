@@ -4,11 +4,15 @@ export function LinkStyle({
   Text,
   children,
   Href,
+  On,
   Black,
+  ExtraCss,
   ...props
 }: {
   Href: string;
-  children?: React.ReactNode;
+    children?: React.ReactNode;
+  ExtraCss?: string
+  On?: boolean;
   Text?: string;
   Black?: boolean;
 } & React.ButtonHTMLAttributes<HTMLAnchorElement>) {
@@ -16,8 +20,10 @@ export function LinkStyle({
     <Link
       className={
         children
-          ? ""
-          : "flex flex-col text-text-primary justify-center items-center transition-colors ease-in border-2 border-primary cursor-pointer hover:border-transparent p-3 rounded-xl bg-transparent hover:bg-primary lg:text-xl text-md  font-bold hover:text-text-secondary lg:w-[200px] w-[170px] text-nowrap"
+          ? ` ${ExtraCss?ExtraCss:""}`
+          : `flex flex-col ${
+              On ? "ButtonOn" : "ButtonOff"
+            } justify-center items-center transition-colors ease-in border-2 cursor-pointer p-3 rounded-xl lg:text-xl text-md font-bold   text-nowrap ${ExtraCss?ExtraCss:""}`
       }
       href={Href}
       target={Black ? "_blank" : ""}
