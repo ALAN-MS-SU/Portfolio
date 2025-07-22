@@ -5,6 +5,7 @@ import Calendar from "@/Assets/Photos/Etec-Calendar.png";
 const TS = "TS";
 const CS = "C#";
 export const LengthDiv = 3;
+
 export const projects: (Web | Mobile)[] = [
   {
     Name: "User Control",
@@ -48,5 +49,7 @@ export const projects: (Web | Mobile)[] = [
     Technology: "NextJS",
     Team: false,
     API: true,
-  }
+  },
 ];
+export const Types = ["Mobile", "Web"];
+export const Languages = ["TS", "C#"];

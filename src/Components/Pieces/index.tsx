@@ -9,3 +9,5 @@ export * from "./Project/Links";
 export * from "./User/UserSection";
 export * from "./Shared/HR";
 export * from "./User/SocialMedia";
+export * from "./Shared/NavButtons"
+export * from "./Shared/Pagination"
