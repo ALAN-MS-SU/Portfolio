@@ -30,13 +30,15 @@ export function NavButtons({
             onClick={() => {
               const boxes = Array.from(document.querySelectorAll(".box"));
               boxes.forEach((Box) => {
-                Box.classList.add("animate-box-out");
                 Box.classList.remove("animate-box-in");
+                Box.classList.add("animate-box-out");
               });
 
               setTimeout(() => {
-                boxes.forEach((Box) => Box.classList.add("animate-box-in"));
-                boxes.forEach((Box) => Box.classList.remove("animate-box-out"));
+                boxes.forEach((Box) => {
+                  Box.classList.remove("animate-box-out");
+                  Box.classList.add("animate-box-in");
+                });
                 Handler(
                   Filter.some((filter) => {
                     return filter === Type;

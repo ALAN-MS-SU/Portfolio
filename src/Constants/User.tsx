@@ -4,7 +4,7 @@ export const GitUser: User = {
   Name: "Alan Martins",
   PhotoUrl: "https://avatars.githubusercontent.com/u/183554060?v=4",
   Describe:
-    "Sou programador Full Stack, com foco em Back-End, mas tenho experiência em Front-End também. Estou sempre tentando melhorar minhas habilidades como programador, para melhorar os projetos em que eu participo, e melhorar como pessoa, para sempre ser um bom membro para qualquer equipe que esteja trabalhando junto.",
+    "I'm a Full Stack Developer, with a focus on Back-End, but I also have experience in Front-End. I'm always trying to improve my dev and soft skills to improve the projects in which I participate and to become a better person.",
 };
 export const UserSocialMedia: { Icon: React.ReactNode; Link: string }[] = [
   {

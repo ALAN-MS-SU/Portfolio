@@ -54,7 +54,7 @@ export function ViewProjects() {
               return (
                 <div
                   key={index}
-                  className={`box ${
+                  className={`box animate-box-in ${
                     (index + 1) % 3 === 0
                       ? "xl:col-span-1 lg:col-span-2 col-span-1"
                       : ""

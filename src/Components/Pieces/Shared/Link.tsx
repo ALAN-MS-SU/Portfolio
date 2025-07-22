@@ -10,8 +10,8 @@ export function LinkStyle({
   ...props
 }: {
   Href: string;
-    children?: React.ReactNode;
-  ExtraCss?: string
+  children?: React.ReactNode;
+  ExtraCss?: string;
   On?: boolean;
   Text?: string;
   Black?: boolean;
@@ -20,10 +20,12 @@ export function LinkStyle({
     <Link
       className={
         children
-          ? ` ${ExtraCss?ExtraCss:""}`
+          ? ` ${ExtraCss ? ExtraCss : ""}`
           : `flex flex-col ${
               On ? "ButtonOn" : "ButtonOff"
-            } justify-center items-center transition-colors ease-in border-2 cursor-pointer p-3 rounded-xl lg:text-xl text-md font-bold   text-nowrap ${ExtraCss?ExtraCss:""}`
+            } justify-center items-center transition-colors ease-in border-2 cursor-pointer p-3 rounded-xl lg:text-xl text-md font-bold   text-nowrap ${
+              ExtraCss ? ExtraCss : ""
+            }`
       }
       href={Href}
       target={Black ? "_blank" : ""}
