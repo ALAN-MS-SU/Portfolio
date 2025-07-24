@@ -3,7 +3,11 @@ import { StaticImageData } from "next/image";
 export class Project {
   Name: string;
   Describe: string;
-  Photo: StaticImageData | string;
+  Cover: {
+    Large: StaticImageData | string;
+    Medium: StaticImageData | string;
+    Small: StaticImageData | string;
+  };
   Repository: string;
   Type: "Web" | "Mobile";
   Language: string;
@@ -14,7 +18,11 @@ export class Project {
   constructor(
     Name: string,
     Describe: string,
-    Photo: StaticImageData | string,
+    Cover: {
+      Large: StaticImageData | string;
+      Medium: StaticImageData | string;
+      Small: StaticImageData | string;
+    },
     Repository: string,
     Type: "Web" | "Mobile",
     Language: string,
@@ -25,7 +33,7 @@ export class Project {
   ) {
     this.Name = Name;
     this.Describe = Describe;
-    this.Photo = Photo;
+    this.Cover = Cover;
     this.Language = Language;
     this.Repository = Repository;
     this.Type = Type;
@@ -40,7 +48,11 @@ export class Web extends Project {
   constructor(
     Name: string,
     Describe: string,
-    Photo: StaticImageData | string,
+    Cover: {
+      Large: StaticImageData | string;
+      Medium: StaticImageData | string;
+      Small: StaticImageData | string;
+    },
     Language: string,
     Repository: string,
     Type: "Web" | "Mobile",
@@ -53,7 +65,7 @@ export class Web extends Project {
     super(
       Name,
       Describe,
-      Photo,
+      Cover,
       Repository,
       Type,
       Language,
@@ -70,7 +82,11 @@ export class Mobile extends Project {
   constructor(
     Name: string,
     Describe: string,
-    Photo: StaticImageData | string,
+    Cover: {
+      Large: StaticImageData | string;
+      Medium: StaticImageData | string;
+      Small: StaticImageData | string;
+    },
     Language: string,
     Repository: string,
     Type: "Web" | "Mobile",
@@ -83,7 +99,7 @@ export class Mobile extends Project {
     super(
       Name,
       Describe,
-      Photo,
+      Cover,
       Repository,
       Type,
       Language,

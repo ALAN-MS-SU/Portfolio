@@ -1,7 +1,13 @@
 import { Mobile, Web } from "../Model/@Types";
-import UserControl from "@/Assets/Photos/User-Control.png";
-import Urna from "@/Assets/Photos/Urna.png";
-import Calendar from "@/Assets/Photos/Etec-Calendar.png";
+import UserControlSmall from "@/Assets/Photos/Cover/Small/User-Control.png";
+import UserControlMedium from "@/Assets/Photos/Cover/Medium/User-Control.png";
+import UserControlLarge from "@/Assets/Photos/Cover/Large/User-Control.png";
+import UrnaSmall from "@/Assets/Photos/Cover/Small/Urna.png";
+import UrnaMedium from "@/Assets/Photos/Cover/Medium/Urna.png";
+import UrnaLarge from "@/Assets/Photos/Cover/Large/Urna.png";
+import CalendarSmall from "@/Assets/Photos/Cover/Small/Etec-Calendar.png";
+import CalendarMedium from "@/Assets/Photos/Cover/Medium/Etec-Calendar.png";
+import CalendarLarge from "@/Assets/Photos/Cover/Large/Etec-Calendar.png";
 const JS = "JS";
 const CS = "C#";
 export const LengthDiv = 3;
@@ -11,7 +17,11 @@ export const projects: (Web | Mobile)[] = [
     Name: "User Control",
     Describe:
       "\tProject to control user entry and exit, using back-end with JS/TS to do the connect with Postgresql database and to manage JWT tokens for level access control for each user. The Project has two level access user and admin, users can view other users and edit their own information, admins can perform all users functions and they can also remove other users from the list, but only if the other user isn't an admin.",
-    Photo: UserControl,
+    Cover: {
+      Small: UserControlSmall,
+      Medium: UserControlMedium,
+      Large: UserControlLarge,
+    },
     Language: JS,
     Type: "Web",
     Repository: "https://github.com/ALAN-MS-SU/User-Control/tree/main",
@@ -26,7 +36,11 @@ export const projects: (Web | Mobile)[] = [
     Type: "Mobile",
     Describe:
       "The project was developed for studies at Etec Paulistano. This Project is a simple calendar made for Etec Paulistano professors, where you can save calendars and dates related to the school. The app was made with .NET 8v and NET MAUI, using XAML for made the graphical interface and C# for the code behind, the app also includes a local storage for saving for your data.",
-    Photo: Calendar,
+    Cover: {
+      Small: CalendarSmall,
+      Medium: CalendarMedium,
+      Large: CalendarLarge,
+    },
     Language: CS,
     Repository: "https://github.com/ALAN-MS-SU/Etec-Calendar",
     Download:
@@ -41,7 +55,11 @@ export const projects: (Web | Mobile)[] = [
     Type: "Web",
     Describe:
       "This project is a voting system for ranking movies inspired by games. It automatically updates when a new vote is registered for any movie and includes a graphic that visually displays the votes for each movie.",
-    Photo: Urna,
+    Cover: {
+      Small: UrnaSmall,
+      Medium: UrnaMedium,
+      Large: UrnaLarge,
+    },
     Language: JS,
     Repository: "https://github.com/ALAN-MS-SU/Urna",
     URL: "https://urna.vercel.app",

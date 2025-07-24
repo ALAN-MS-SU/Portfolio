@@ -15,7 +15,7 @@ export function Box({ Project, ID }: { Project: Project; ID: number }) {
         <div className="opacity-0 absolute w-full h-full flex justify-center items-center bg-primary group-hover/animate:opacity-90 transition-all ease-in">
           <p className="text-4xl text-text-secondary font-bold">View</p>
         </div>
-        <Image className="w-full h-full" src={Project.Photo} alt="Photo" />
+        <Image className="w-full h-full" src={Project.Cover.Small} alt="Photo" />
         <div className="absolute bottom-0 h-[80px] flex justify-center items-center w-full">
           <div className="bg-primary relative w-full transition-all ease-in h-full z-[0] opacity-100 group-hover/animate:opacity-0">
             <h1 className="transition-all ease-in flex justify-center items-center font-semibold h-full opacity-100 text-text-secondary l md:text-2xl text-xl z-[1] group-hover/animate:opacity-0">
