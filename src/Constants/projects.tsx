@@ -8,6 +8,9 @@ import UrnaLarge from "@/Assets/Photos/Cover/Large/Urna.png";
 import CalendarSmall from "@/Assets/Photos/Cover/Small/Etec-Calendar.png";
 import CalendarMedium from "@/Assets/Photos/Cover/Medium/Etec-Calendar.png";
 import CalendarLarge from "@/Assets/Photos/Cover/Large/Etec-Calendar.png";
+import HackSmall from "@/Assets/Photos/Cover/Small/HackROM.png";
+import HackMedium from "@/Assets/Photos/Cover/Medium/HackROM.png";
+import HackLarge from "@/Assets/Photos/Cover/Large/HackROM.png";
 const JS = "JS";
 const CS = "C#";
 export const LengthDiv = 3;
@@ -16,7 +19,7 @@ export const projects: (Web | Mobile)[] = [
   {
     Name: "User Control",
     Describe:
-      "\tProject to control user entry and exit, using back-end with JS/TS to do the connect with Postgresql database and to manage JWT tokens for level access control for each user. The Project has two level access user and admin, users can view other users and edit their own information, admins can perform all users functions and they can also remove other users from the list, but only if the other user isn't an admin.",
+      "Project to control user entry and exit, using back-end with JS/TS to do the connect with Postgresql database and to manage JWT tokens for level access control for each user. The Project has two level access user and admin, users can view other users and edit their own information, admins can perform all users functions and they can also remove other users from the list, but only if the other user isn't an admin.",
     Cover: {
       Small: UserControlSmall,
       Medium: UserControlMedium,
@@ -26,7 +29,7 @@ export const projects: (Web | Mobile)[] = [
     Type: "Web",
     Repository: "https://github.com/ALAN-MS-SU/User-Control/tree/main",
     Year: "2024",
-    Technology: "NextJS",
+    Technology: ["NextJS"],
     API: true,
     Team: false,
     URL: "https://usercontrol.vercel.app",
@@ -48,7 +51,7 @@ export const projects: (Web | Mobile)[] = [
     Year: "2024",
     API: false,
     Team: false,
-    Technology: ".NET MAUI",
+    Technology: [".NET MAUI"],
   },
   {
     Name: "Urna",
@@ -64,10 +67,28 @@ export const projects: (Web | Mobile)[] = [
     Repository: "https://github.com/ALAN-MS-SU/Urna",
     URL: "https://urna.vercel.app",
     Year: "2024",
-    Technology: "NextJS",
+    Technology: ["NextJS"],
     Team: false,
     API: true,
   },
+  {
+    Name: "Hack Roms",
+    Describe:
+      "This project was made a long time ago. It's a Super Nintendo hack ROM site inspired by SMW Central. Here you can download and upload hack ROMs for any Super Nintendo game. The site was built with React, Express.js and a MySQL database, but the database was later replaced by PostgreSQL to slightly improve performance.",
+    Cover: {
+      Small: HackSmall,
+      Medium: HackMedium,
+      Large: HackLarge,
+    },
+    Language: JS,
+    Type: "Web",
+    Repository: "https://github.com/ALAN-MS-SU/hack-roms",
+    Year: "2024",
+    Technology: ["ReactJS", "ExpressJS"],
+    API: true,
+    Team: false,
+    URL: "https://hackroms.vercel.app/",
+  },
 ];
 export const Types = ["Mobile", "Web"];
-export const Languages = ["JS", "C#"];
+export const Languages = [JS, CS];

@@ -12,7 +12,7 @@ export class Project {
   Type: "Web" | "Mobile";
   Language: string;
   Year: string;
-  Technology: string;
+  Technology: string[];
   API: boolean;
   Team: number | false;
   constructor(
@@ -27,7 +27,7 @@ export class Project {
     Type: "Web" | "Mobile",
     Language: string,
     Year: string,
-    Technology: string,
+    Technology: string[],
     API: boolean,
     Team: number | false
   ) {
@@ -57,7 +57,7 @@ export class Web extends Project {
     Repository: string,
     Type: "Web" | "Mobile",
     Year: string,
-    Technology: string,
+    Technology: string[],
     API: boolean,
     Team: number | false,
     URL?: string
@@ -91,7 +91,7 @@ export class Mobile extends Project {
     Repository: string,
     Type: "Web" | "Mobile",
     Year: string,
-    Technology: string,
+    Technology: string[],
     API: boolean,
     Team: number | false,
     Download?: string
