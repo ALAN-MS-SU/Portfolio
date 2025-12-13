@@ -87,7 +87,7 @@ export const projects: (Web | Mobile)[] = [
     Technology: ["ReactJS", "ExpressJS"],
     API: true,
     Team: false,
-    URL: "https://hackroms.vercel.app/",
+    URL: undefined,
   },
 ];
 export const Types = ["Mobile", "Web"];

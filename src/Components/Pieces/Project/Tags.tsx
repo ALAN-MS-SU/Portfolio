@@ -29,18 +29,19 @@ export async function Tags({
           </p>
           <div className=" flex items-center justify-center">
             <p className="min-[1210px]:text-4xl min-[610px]:text-xl text-lg font-bold text-text-primary">
-              {Technology.length > 1 ? "Technologies" : "Technology"}
+              {Technology.length > 1 ? "Technologies:" : "Technology:"}
             </p>
             <p
               className={`min-[1210px]:text-4xl min-[610px]:text-xl text-lg font-bold text-text-primary flex flex-col justify-center items-center`}
             >
+              
               {Technology.map((technology, index) => {
                 return (
                   <span
                     className="min-[1210px]:text-2xl min-[610px]:text-lg text-[80%] font-bold"
                     key={index}
                   >
-                    {technology}
+                    &nbsp;&nbsp;{technology}
                   </span>
                 );
               })}
