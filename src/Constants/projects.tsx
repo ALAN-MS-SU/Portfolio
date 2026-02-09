@@ -32,7 +32,7 @@ export const projects: (Web | Mobile)[] = [
     Technology: ["NextJS"],
     API: true,
     Team: false,
-    URL: "https://usercontrol.vercel.app",
+    URL: undefined,
   },
   {
     Name: "Calendar App",
