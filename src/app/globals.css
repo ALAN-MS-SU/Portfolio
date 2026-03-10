@@ -2,11 +2,15 @@
 @import "tailwindcss";
 
 @theme {
-  --color-primary: #7b33e0;
+  --color-primary: #006DFF;
+  --color-bg: #e9dcc8;
+  --color-bg-light: #F4F2ED;
   --color-text-primary: black;
   --color-text-secondary: white;
   --color-body: #f5ebdd;
   --font-default: "Lexend", sans-serif;
+  --color-yes: #0066ff;
+  --color-no: #ff0000;
   --animate-user: User 1s ease-in-out forwards;
   --animate-box-in: BoxIn 1s ease-in-out forwards;
   --animate-box-out: BoxOut 1s ease-in-out forwards;

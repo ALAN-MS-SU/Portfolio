@@ -11,3 +11,4 @@ export * from "./Shared/HR";
 export * from "./User/SocialMedia";
 export * from "./Shared/NavButtons"
 export * from "./Shared/Pagination"
+export * from "./Project/Table"

@@ -9,8 +9,10 @@ export async function ProjectView({ ID }: { ID: number }) {
     Describe,
     Cover,
     Repository,
-    Type,
+    Type, 
+      Photo,
     Language,
+      Features,
     Year,
     Technology,
     API,
@@ -21,9 +23,10 @@ export async function ProjectView({ ID }: { ID: number }) {
   return (
     <>
       <Tittle Name={Name} Cover={Cover} />
-      <DescribeProject Describe={Describe} />
+      <DescribeProject Mob={Type=="Mobile"?true:false} Photo={Photo} Describe={Describe} />
       <Tags
         Type={Type}
+        Features={Features}
         Language={Language}
         Year={Year}
         Technology={Technology}

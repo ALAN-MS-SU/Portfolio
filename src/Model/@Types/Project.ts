@@ -3,14 +3,12 @@ import { StaticImageData } from "next/image";
 export class Project {
   Name: string;
   Describe: string;
-  Cover: {
-    Large: StaticImageData | string;
-    Medium: StaticImageData | string;
-    Small: StaticImageData | string;
-  };
-  Repository: string;
+  Cover: string;
+  Repository?: string;
   Type: "Web" | "Mobile";
+  Photo: string;
   Language: string;
+  Features: string[];
   Year: string;
   Technology: string[];
   API: boolean;
@@ -18,14 +16,12 @@ export class Project {
   constructor(
     Name: string,
     Describe: string,
-    Cover: {
-      Large: StaticImageData | string;
-      Medium: StaticImageData | string;
-      Small: StaticImageData | string;
-    },
+    Cover: string,
     Repository: string,
     Type: "Web" | "Mobile",
+    Photo: string,
     Language: string,
+    Features: string[],
     Year: string,
     Technology: string[],
     API: boolean,
@@ -35,8 +31,10 @@ export class Project {
     this.Describe = Describe;
     this.Cover = Cover;
     this.Language = Language;
+    this.Features = Features;
     this.Repository = Repository;
     this.Type = Type;
+    this.Photo = Photo;
     this.Year = Year;
     this.Technology = Technology;
     this.API = API;
@@ -48,14 +46,12 @@ export class Web extends Project {
   constructor(
     Name: string,
     Describe: string,
-    Cover: {
-      Large: StaticImageData | string;
-      Medium: StaticImageData | string;
-      Small: StaticImageData | string;
-    },
+    Cover: string,
     Language: string,
+    Features: string[],
     Repository: string,
     Type: "Web" | "Mobile",
+    Photo: string,
     Year: string,
     Technology: string[],
     API: boolean,
@@ -68,7 +64,9 @@ export class Web extends Project {
       Cover,
       Repository,
       Type,
+      Photo,
       Language,
+      Features,
       Year,
       Technology,
       API,
@@ -82,14 +80,12 @@ export class Mobile extends Project {
   constructor(
     Name: string,
     Describe: string,
-    Cover: {
-      Large: StaticImageData | string;
-      Medium: StaticImageData | string;
-      Small: StaticImageData | string;
-    },
+    Cover: string,
     Language: string,
+    Features: string[],
     Repository: string,
     Type: "Web" | "Mobile",
+    Photo: string,
     Year: string,
     Technology: string[],
     API: boolean,
@@ -102,7 +98,9 @@ export class Mobile extends Project {
       Cover,
       Repository,
       Type,
+      Photo,
       Language,
+      Features,
       Year,
       Technology,
       API,

@@ -42,10 +42,10 @@ export function ViewProjects() {
   }
   return (
     <section className="flex flex-col items-center" id="Projects">
-      <h1 className="text-6xl mb-[20px] font-bold">Projects</h1>
+      <h1 className="text-6xl mb-[20px] font-bold">Projetos</h1>
       {Boxes.length - 1 === 0 ? (
         <h2 className="min-h-[470px] flex justify-center items-center text-5xl font-bold">
-          Nothing found
+          Nada foi encontrado
         </h2>
       ) : (
         <div className=" w-full p-10 gap-y-[30px] pl-4 pr-4 xl:grid-cols-3 lg:grid-cols-2 grid-cols-1 row-auto grid justify-items-center">

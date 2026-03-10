@@ -1,15 +1,26 @@
+"use client"
 import { Project } from "../../../Model/@Types";
-export async function DescribeProject({ Describe }: Pick<Project, "Describe">) {
+import Image from "next/image"
+export function DescribeProject({ Describe,Photo,Mob }: Pick<Project, "Describe"|"Photo">&{Mob?:boolean}) {
   return (
-    <div className="flex flex-col justify-center items-center">
-      <div className="min-[1770px]:w-[1760px] min-[1610px]:w-[1600px] min-[1460px]:w-[1450px] min-[1210px]:w-[1200px] min-[810px]:w-[800px] min-[610px]:w-[600px] min-[410px]:w-[400px] w-[300px] mt-6 mb-6 border-4 border-text-primary min-[610px]:p-8 p-4 rounded-xl">
-        <h2 className="min-[1210px]:text-4xl min-[610px]:text-2xl text-lg mb-[20px] font-bold">
-          Description
+    <div className="flex flex-row justify-center items-center mb-2">
+        <div className={"max-w-400 w-full flex flex-row justify-center items-center gap-2"}>
+        <div className={`w-5/10 p-8 h-[400px] relative bg-bg rounded-xl flex flex-col justify-center items-center`} >
+            <h2 className="min-[610px]:text-xl text-lg font-bold absolute top-1 left-8">Visualização</h2>
+            <div className={`${Mob?"w-1/4 ":"w-full"} h-full relative`}>
+             <Image className={"rounded-2xl border-text-primary border-1 border-solid"} src={`/View/${Photo}`} alt={"Photo"} fill
+             />
+            </div>
+        </div>
+      <div className="w-5/10 p-8 min-[610px]:h-[400px] h-[400px] relative bg-bg rounded-xl">
+        <h2 className="min-[610px]:text-xl text-lg mb-[20px] font-bold">
+            Visão Geral
         </h2>
-        <p className="min-[610px]:text-xl text-text-primary text-md text-justify">
+        <p className="text-text-primary text-md text-justify">
           &nbsp;&nbsp;{Describe}
         </p>
       </div>
+        </div>
     </div>
   );
 }
