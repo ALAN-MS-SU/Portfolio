@@ -22,3 +22,20 @@ export const UserSocialMedia: { Icon: React.ReactNode; Link: string }[] = [
     Link: "https://github.com/ALAN-MS-SU/ALAN-MS-SU",
   },
 ];
+
+export const UserStack:string[] = [ "html",
+  "css",
+  "js",
+  "ts",
+  "nodejs",
+  "react",
+  "nextjs",
+  "tailwindcss",
+  "postgres",
+  "redis",
+  "git",
+  "docker",
+  "jest",
+    "linux",
+    "github"
+]
