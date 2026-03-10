@@ -180,7 +180,7 @@ export const projects: (Web | Mobile)[] = [
       "Armazenamento Local"
     ],
     Type: "Mobile",
-    Photo: "ToDoList.png",
+    Photo: "ToDoList.jpg",
     Repository: "https://github.com/ALAN-MS-SU/ToDoList",
     Year: "2025",
     Technology: ["css","js","ts","nodejs","reactnative","tailwindcss","git","expo","android","apple"],
