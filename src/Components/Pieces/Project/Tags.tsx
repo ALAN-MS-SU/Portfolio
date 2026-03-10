@@ -19,30 +19,30 @@ export async function Tags({
      
 
   return (
-    <div className="flex flex-row justify-center items-center mb-5">
-      <div className={"flex flex-row justify-center items-center gap-2 max-w-400 w-full"}>
-      <div className="w-1/3 p-8 min-[610px]:h-[315px] h-[400px] relative bg-bg rounded-xl">
-        <h2 className=" min-[610px]:text-xl text-lg font-bold absolute top-5 ">
+    <div className="flex flex-row justify-center items-center mb-5 w-full">
+      <div className={"flex 2xl:flex-row flex-col mx-2 justify-center items-center gap-2 max-w-400 w-full"}>
+      <div className="2xl:w-1/3 md:w-8/10 w-full md:px-8 sm:px-4 px-2 p-8  2xl:h-[315px] h-[300px] relative bg-bg rounded-xl @container">
+        <h2 className="@4xl:text-xl @lg:text-lg text-sm font-bold absolute top-5 ">
           Informações
         </h2>
-        <div className="grid min-[1460px]:grid-cols-2 grid-cols-1 justify-items-center w-full h-full">
-          <p className="text-lg text-center font-bold flex items-center text-text-primary">
+        <div className="grid @md:grid-cols-2 grid-cols-1 justify-items-center w-full h-full @md:py-0 py-3">
+          <p className="@2xl:text-lg @lg:text-[100%] text-[80%] text-center font-bold flex items-center  text-text-primary">
             Ano do projeto <br/>{Year}
           </p>
-          <p className="min-[610px]:text-xl text-lg font-bold flex items-center text-text-primary">
+          <p className="@2xl:text-lg @lg:text-[100%] text-[80%] font-bold flex items-center text-text-primary">
             Projeto {Type} 
           </p>
-          <p className="min-[610px]:text-xl text-lg font-bold flex flex-col justify-center items-center text-text-primary">
+          <p className="@2xl:text-lg @lg:text-[100%] text-[80%] font-bold flex flex-col justify-center items-center text-text-primary">
             {Team ? `Tamanho da equipe: ${Team}` : "Projeto solo"}
             <span>
-              {Team ? <IoPeopleSharp className={"text-2xl text-yes"}/> : <IoPersonSharp className={"text-2xl text-yes"}/>}
+              {Team ? <IoPeopleSharp className={"@2xl:text-2xl @lg:text-xl text-lg text-yes"}/> : <IoPersonSharp className={"@2xl:text-2xl @lg:text-xl text-lg text-yes"}/>}
             </span>
           </p>
-          <p className="min-[610px]:text-xl text-lg font-bold flex flex-col justify-center items-center text-text-primary">
+          <p className="@2xl:text-lg @lg:text-[100%] text-[80%] font-bold flex flex-col justify-center items-center text-text-primary">
             API
             
             <span>
-              {API ? <BiSolidLike className={"text-2xl text-yes"}/> : <BiSolidDislike className={"text-2xl text-no"}/>}
+              {API ? <BiSolidLike className={"@2xl:text-2xl @lg:text-xl text-lg text-yes"}/> : <BiSolidDislike className={"@2xl:text-2xl @lg:text-xl text-lg text-no"}/>}
             </span>
           </p>
           
@@ -50,21 +50,22 @@ export async function Tags({
         
       </div>
 
-        <div className="w-1/3 p-8 min-[610px]:h-[315px] h-[400px] relative bg-bg rounded-xl">
-          <h2 className=" min-[610px]:text-xl text-lg font-bold absolute top-5 ">
+        <div className="2xl:w-1/3 md:w-8/10 w-full md:px-8 sm:px-4 px-2 p-8 md:h-[315px] h-auto relative bg-bg rounded-xl @container">
+          <h2 className="@4xl:text-xl @lg:text-lg @sm:text-sm text-[90%] font-bold absolute top-5 ">
             Funcionalidades
           </h2>
           <ul className={"mt-5 ml-3.5 list-disc space-y-2"}>
           {Features.map((Feature, index) => {
-            return <li className={`${Features.length <= 7?"text-md":"text-sm"} text-text-primary`} key={index}>
+            return <li className={`${Features.length <= 7?"@2xl:text-[100%] @md:text-sm @sm:text-[90%] text-[80%]":"@2xl:text-[90%] @md:text-[85%] @sm:text-[80%] text-[70%]"} 
+            text-text-primary`} key={index}>
               {Feature}
             </li>
           })}
         </ul>
         </div>
 
-        <div className="w-1/3 p-8 min-[610px]:h-[315px] h-[400px] relative bg-bg rounded-xl">
-        <h2 className=" text-lg font-bold absolute top-1 ">
+        <div className="2xl:w-1/3 md:w-8/10 w-full md:px-8 sm:px-4 px-2 p-8 md:h-[315px] sm:h-[300px] h-[280px] relative bg-bg rounded-xl @container">
+        <h2 className="@lg:text-lg @sm:text-sm text-[90%] font-bold absolute @lg:top-1 top-3  ">
           Stack de Tecnologias
         </h2>
         <div className={"w-full flex flex-col items-center justify-center h-full"}>

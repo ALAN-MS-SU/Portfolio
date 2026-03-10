@@ -38,7 +38,7 @@ export function Table({Technologies}: {Technologies:string[]}) {
                                     img
                                     src={`${IconUrl}${Col}`}
                                     alt={"Icon"}
-                                    className="w-15 h-15 transition-all ease-in hover:scale-125 cursor-pointer"
+                                    className="@lg:w-15 @lg:h-15 @md:w-13 @md:h-13 @sm:w-10 @sm:h-10 w-8 h-8 transition-all ease-in hover:scale-125 cursor-pointer"
                                     
                                 />
                                 </td>
