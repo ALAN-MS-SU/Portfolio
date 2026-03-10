@@ -6,7 +6,6 @@ import { IoPersonSharp } from "react-icons/io5";
 import { IoPeopleSharp } from "react-icons/io5";
 export async function Tags({
   Type,
-  Language,
     Features,
   Year,
   Technology,
@@ -14,7 +13,7 @@ export async function Tags({
   Team,
 }: Pick<
   Project,
-  "Type" | "Language" | "Year" | "Technology" | "API" | "Team" |"Features"
+  "Type" | "Year" | "Technology" | "API" | "Team" |"Features"
 >) {
   
      

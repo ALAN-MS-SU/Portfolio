@@ -1,5 +1,4 @@
 "use client";
-import Image from "next/image";
 import { Project } from "../../../Model/@Types";
 import { useRouter } from "next/navigation";
 export function Box({ Project, ID }: { Project: Project; ID: number }) {

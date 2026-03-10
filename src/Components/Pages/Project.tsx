@@ -7,11 +7,9 @@ export async function ProjectView({ ID }: { ID: number }) {
   const {
     Name,
     Describe,
-    Cover,
     Repository,
     Type, 
       Photo,
-    Language,
       Features,
     Year,
     Technology,
@@ -22,12 +20,11 @@ export async function ProjectView({ ID }: { ID: number }) {
   const Download = (Project as Mobile).Download;
   return (
     <>
-      <Tittle Name={Name} Cover={Cover} />
+      <Tittle Name={Name} />
       <DescribeProject Mob={Type=="Mobile"?true:false} Photo={Photo} Describe={Describe} />
       <Tags
         Type={Type}
         Features={Features}
-        Language={Language}
         Year={Year}
         Technology={Technology}
         API={API}
