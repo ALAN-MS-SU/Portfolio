@@ -21,8 +21,8 @@ export async function Tags({
   return (
     <div className="flex flex-row justify-center items-center mb-5 w-full">
       <div className={"flex 2xl:flex-row flex-col mx-2 justify-center items-center gap-2 max-w-400 w-full"}>
-      <div className="2xl:w-1/3 md:w-8/10 w-full md:px-8 sm:px-4 px-2 p-8  2xl:h-[315px] h-[300px] relative bg-bg rounded-xl @container">
-        <h2 className="@4xl:text-xl @lg:text-lg text-sm font-bold absolute top-5 ">
+      <div className="2xl:w-1/3 md:w-8/10 w-full md:px-8 sm:px-4 px-2  p-8 2xl:h-[315px] h-[300px] relative bg-bg rounded-xl @container">
+        <h2 className="@4xl:text-xl @lg:text-lg text-sm font-bold absolute md:top-5 sm:top-3 top-2 ">
           Informações
         </h2>
         <div className="grid @md:grid-cols-2 grid-cols-1 justify-items-center w-full h-full @md:py-0 py-3">
@@ -50,7 +50,7 @@ export async function Tags({
         
       </div>
 
-        <div className="2xl:w-1/3 md:w-8/10 w-full md:px-8 sm:px-4 px-2 p-8 md:h-[315px] h-auto relative bg-bg rounded-xl @container">
+        <div className="2xl:w-1/3 md:w-8/10 w-full md:px-8 sm:px-4 px-2 p-8 2xl:h-[315px] h-auto relative bg-bg rounded-xl @container">
           <h2 className="@4xl:text-xl @lg:text-lg @sm:text-sm text-[90%] font-bold absolute top-5 ">
             Funcionalidades
           </h2>
