@@ -21,7 +21,7 @@ export async function ProjectView({ ID }: { ID: number }) {
   return (
     <>
       <LinkStyle
-        Href={"/"}
+        Href={"/#Projects"}
         className="absolute md:w-auto w-full justify-center items-center transition-colors ease-in border-2 cursor-pointer lg:p-3 p-2 md:rounded-xl md:border-x-2 border-x-0 md:border-t-2 border-t-0 lg:text-xl text-md font-bold text-nowrap ButtonOff xl:top-5 xl:left-5 md:top-2 md:left-2 top-0 left-0"
       >
         <FaArrowLeftLong className=" w-full" />
