@@ -19,7 +19,7 @@ export function NavButtons({
             Text={Type}
             Href="#Projects"
             key={index}
-            ExtraCss="sm:w-[100px] sm:h-[60px] w-[70px] h-[40px]"
+            className="sm:w-[100px] sm:h-[60px] w-[70px] h-[40px]"
             On={
               Filter.some((filter) => {
                 return filter === Type;
@@ -44,7 +44,7 @@ export function NavButtons({
                     return filter === Type;
                   })
                     ? Filter.filter((type) => type !== Type)
-                    : [...Filter, Type]
+                    : [...Filter, Type],
                 );
               }, 500);
             }}

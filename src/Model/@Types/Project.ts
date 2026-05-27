@@ -23,7 +23,7 @@ export class Project {
     Year: string,
     Technology: string[],
     API: boolean,
-    Team: number | false
+    Team: number | false,
   ) {
     this.Name = Name;
     this.Describe = Describe;
@@ -54,7 +54,7 @@ export class Web extends Project {
     Technology: string[],
     API: boolean,
     Team: number | false,
-    URL?: string
+    URL?: string,
   ) {
     super(
       Name,
@@ -68,7 +68,7 @@ export class Web extends Project {
       Year,
       Technology,
       API,
-      Team
+      Team,
     );
     this.URL = URL;
   }
@@ -88,7 +88,7 @@ export class Mobile extends Project {
     Technology: string[],
     API: boolean,
     Team: number | false,
-    Download?: string
+    Download?: string,
   ) {
     super(
       Name,
@@ -102,7 +102,7 @@ export class Mobile extends Project {
       Year,
       Technology,
       API,
-      Team
+      Team,
     );
     this.Download = Download;
   }

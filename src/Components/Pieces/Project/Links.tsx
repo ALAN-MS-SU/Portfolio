@@ -16,7 +16,7 @@ export async function Links({
 
       {URL && (
         <LinkStyle
-          ExtraCss="lg:w-[200px] w-[170px]"
+          className="lg:w-[200px] w-[170px]"
           Href={URL}
           Text="View Site"
           Black
@@ -24,7 +24,7 @@ export async function Links({
       )}
       {Download && (
         <LinkStyle
-          ExtraCss="lg:w-[200px] w-[170px]"
+          className="lg:w-[200px] w-[170px]"
           Href={Download}
           Text="Download APK"
         />

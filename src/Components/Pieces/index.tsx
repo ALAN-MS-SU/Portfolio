@@ -9,7 +9,7 @@ export * from "./Project/Links";
 export * from "./User/UserSection";
 export * from "./Shared/HR";
 export * from "./User/SocialMedia";
-export * from "./Shared/NavButtons"
-export * from "./Shared/Pagination"
-export * from "./Project/Table"
-export * from "./User/Stack"
+export * from "./Shared/NavButtons";
+export * from "./Shared/Pagination";
+export * from "./Project/Table";
+export * from "./User/Stack";

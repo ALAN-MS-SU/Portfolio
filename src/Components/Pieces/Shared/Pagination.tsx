@@ -22,7 +22,7 @@ export function PagButtons({
               Text={String(index + 1)}
               Href="#Projects"
               key={index}
-              ExtraCss="sm:w-[50px] sm:h-[50px] w-[40px] h-[40px]"
+              className="sm:w-[50px] sm:h-[50px] w-[40px] h-[40px]"
               On={Pagination == index ? true : false}
               onClick={() => {
                 const boxes = Array.from(document.querySelectorAll(".box"));
@@ -34,7 +34,7 @@ export function PagButtons({
                 setTimeout(() => {
                   boxes.forEach((Box) => Box.classList.add("animate-box-in"));
                   boxes.forEach((Box) =>
-                    Box.classList.remove("animate-box-out")
+                    Box.classList.remove("animate-box-out"),
                   );
                   SetPagination(index);
                 }, 500);

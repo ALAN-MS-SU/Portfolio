@@ -2,9 +2,9 @@
 @import "tailwindcss";
 
 @theme {
-  --color-primary: #006DFF;
+  --color-primary: #006dff;
   --color-bg: #e9dcc8;
-  --color-bg-light: #F4F2ED;
+  --color-bg-light: #f4f2ed;
   --color-text-primary: black;
   --color-text-secondary: white;
   --color-body: #f5ebdd;
@@ -25,7 +25,7 @@
   background-color: transparent;
   border-color: var(--color-primary);
 }
-.ButtonOff:hover{
+.ButtonOff:hover {
   color: var(--color-text-secondary);
   background-color: var(--color-primary);
   border-color: transparent;
