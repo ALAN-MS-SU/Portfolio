@@ -19,7 +19,7 @@ export const UserSocialMedia: { Icon: React.ReactNode; Link: string }[] = [
     Icon: (
       <FaGithubSquare className="lg:text-[400%] sm:text-[300%] text-[200%] text-text-primary transition-colors ease-in cursor-pointer hover:text-primary" />
     ),
-    Link: "https://github.com/ALAN-MS-SU/ALAN-MS-SU",
+    Link: "https://github.com/ALAN-MS-SU",
   },
 ];
 
