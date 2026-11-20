@@ -44,7 +44,7 @@ export function ViewProjects() {
     <section className="flex flex-col items-center" id="Projects">
       <h1 className="text-6xl mb-[20px] font-bold">Projetos</h1>
       {Boxes.length - 1 === 0 ? (
-        <h2 className="min-h-[470px] flex justify-center items-center text-5xl font-bold">
+        <h2 className="min-h-[470px] flex justify-center items-center text-5xl font-bold text-text-primary">
           Nada foi encontrado
         </h2>
       ) : (

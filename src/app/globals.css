@@ -2,15 +2,15 @@
 @import "tailwindcss";
 
 @theme {
-  --color-primary: #006dff;
-  --color-bg: #e9dcc8;
-  --color-bg-light: #f4f2ed;
-  --color-text-primary: black;
-  --color-text-secondary: white;
-  --color-body: #f5ebdd;
+  --color-primary: #d7263d;
+  --color-bg: #ECCACA;
+  --color-bg-light: #fff;
+  --color-text-primary: #171717;
+  --color-text-secondary: #FFF;
+  --color-body:#fcebec;
+  --color-yes: blue;
+  --color-no: red;
   --font-default: "Lexend", sans-serif;
-  --color-yes: #0066ff;
-  --color-no: #ff0000;
   --animate-user: User 1s ease-in-out forwards;
   --animate-box-in: BoxIn 1s ease-in-out forwards;
   --animate-box-out: BoxOut 1s ease-in-out forwards;
