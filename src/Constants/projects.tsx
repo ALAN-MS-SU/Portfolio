@@ -90,7 +90,7 @@ export const projects: (Web | Mobile)[] = [
     Technology: ["cs", "dotnet", "git", "android", "apple", "visualstudio"],
   },
   {
-    Name: "Controle usuários",
+    Name: "User Control",
     Describe:
       "Sistema de gerenciamento de usuários com autenticação e controle de acesso baseado em permissões. A aplicação utiliza um backend em Node.js com autenticação via JWT e banco de dados PostgreSQL para gerenciar usuários de forma segura. O sistema possui dois níveis de acesso (usuário e administrador), permitindo que usuários gerenciem suas próprias informações enquanto administradores possuem controle completo sobre o gerenciamento de usuários. Administradores podem visualizar, editar e remover usuários do sistema, com restrições que impedem a remoção de outros administradores.",
     Cover: "User-Control.png",

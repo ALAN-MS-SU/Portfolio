@@ -37,7 +37,7 @@ export function ViewProjects() {
     return Items;
   }
   const Boxes: (Web | Mobile)[][] = [];
-  for (let i = 0; i <= LengthButtons; i++) {
+  for (let i = 0; i <= LengthButtons-1; i++) {
     Boxes.push(DivBoxes(i));
   }
   return (
@@ -60,7 +60,7 @@ export function ViewProjects() {
                       : ""
                   }`}
                 >
-                  <Box Project={Project} ID={LengthDiv * Pagination + index} />
+                  <Box Project={Project} ID={projects.indexOf(Project)} />
                 </div>
               );
           })}

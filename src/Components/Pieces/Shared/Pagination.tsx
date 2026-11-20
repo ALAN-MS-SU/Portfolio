@@ -16,7 +16,7 @@ export function PagButtons({
   return (
     <div className="flex flex-row justify-center items-center gap-x-[10px] mt-[10px]">
       {Items.map((project, index) => {
-        if (index !== Items.length - 1) {
+        if (index !== Items.length ) {
           return (
             <LinkStyle
               Text={String(index + 1)}
