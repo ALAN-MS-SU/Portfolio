@@ -107,3 +107,10 @@ export class Mobile extends Project {
     this.Download = Download;
   }
 }
+export interface FilterItems {
+  languages: string[];
+  Frameworks: string[];
+  Types: string[];
+  Databases: string[];
+  Others: string[];
+}

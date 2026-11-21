@@ -1,54 +1,62 @@
 "use client";
-import { LinkStyle } from "@/Components/Pieces";
-import { Dispatch, SetStateAction } from "react";
+import { RefObject, useRef } from "react";
+import { Button } from "./Button";
+import { IconUrl } from "@/Constants";
 
 export function NavButtons({
   Values,
-  Filter,
-  Handler,
+  Text = false,
+  Mode = "CO",
+  Filters,
 }: {
   Values: string[];
-  Filter: string[];
-  Handler: Dispatch<SetStateAction<string[]>>;
+  Text?: boolean;
+  Mode?: "OP" | "CO";
+  Filters: RefObject<string[]>;
 }) {
   return (
-    <div className="flex flex-row justify-center items-center sm:gap-x-[10px] gap-x-[5px] mt-[5px]">
-      {Values.map((Type, index) => {
+    <div className="flex flex-wrap gap-y-5 justify-center items-center sm:gap-x-[10px] gap-x-[5px] w-full px-5">
+      {Values.map((Item, index) => {
         return (
-          <LinkStyle
-            Text={Type}
-            Href="#Projects"
+          <Button
+            Text={Text ? Item : undefined}
             key={index}
-            className="sm:w-[100px] sm:h-[60px] w-[70px] h-[40px]"
+            Mode={Mode}
+            className={`sm:w-[100px] sm:h-[60px] w-[70px] h-[40px] transition-all ease-in`}
             On={
-              Filter.some((filter) => {
-                return filter === Type;
+              Filters.current.some((filter) => {
+                return filter === Item;
               })
                 ? true
                 : false
             }
-            onClick={() => {
-              const boxes = Array.from(document.querySelectorAll(".box"));
-              boxes.forEach((Box) => {
-                Box.classList.remove("animate-box-in");
-                Box.classList.add("animate-box-out");
-              });
-
-              setTimeout(() => {
-                boxes.forEach((Box) => {
-                  Box.classList.remove("animate-box-out");
-                  Box.classList.add("animate-box-in");
+            onClick={(e) => {
+              if (
+                Filters.current.some((filter) => {
+                  return filter === Item;
+                })
+              ) {
+                Filters.current = Filters.current.filter((filter) => {
+                  return filter !== Item;
                 });
-                Handler(
-                  Filter.some((filter) => {
-                    return filter === Type;
-                  })
-                    ? Filter.filter((type) => type !== Type)
-                    : [...Filter, Type],
-                );
-              }, 500);
+              } else {
+                Filters.current.push(Item);
+              }
+
+              if (Mode == "OP") {
+                e.currentTarget.classList.toggle("opacity-50");
+                e.currentTarget.classList.toggle("opacity-100");
+              }
             }}
-          />
+          >
+            {!Text && (
+              <img
+                src={`${IconUrl}${Item}`}
+                alt={Item}
+                className="h-full w-full transition-all ease-in hover:scale-125 cursor-pointer"
+              />
+            )}
+          </Button>
         );
       })}
     </div>

@@ -244,7 +244,20 @@ export const projects: (Web | Mobile)[] = [
     URL: undefined,
   },
 ];
-
 export const IconUrl = "https://go-skill-icons.vercel.app/api/icons?i=";
-export const Types = ["Mobile", "Web"];
-export const Languages = [JS, CS];
+export const FilterItems = {
+  languages: ["js", "cs"],
+  Frameworks: ["nextjs", "dotnet", "nestjs", "tailwindcss", "reactnative"],
+  Types: ["Site", "API", "App"],
+  Databases: ["postgresql", "redis"],
+  Others: [
+    "git",
+    "github",
+    "docker",
+    "jest",
+    "html",
+    "css",
+    "nodejs",
+    "prisma",
+  ],
+};

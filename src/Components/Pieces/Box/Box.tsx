@@ -33,11 +33,7 @@ export function Box({ Project, ID }: { Project: Project; ID: number }) {
                 ? `${Project.Name.substr(0, 18)}...`
                 : Project.Name}
             </h1>
-            <div className="relative md:bottom-[90%] md:left-[calc(100%-65px-7.5px)] bottom-[80%] left-[calc(100%-50px-7.5px)] flex justify-center items-center md:h-[65px] md:w-[65px] h-[50px] w-[50px] border-[4px] border-text-secondary rounded-md">
-              <p className=" md:text-2xl text-xl font-bold text-text-secondary ">
-                {Project.Language}
-              </p>
-            </div>
+            
           </div>
         </div>
       </div>

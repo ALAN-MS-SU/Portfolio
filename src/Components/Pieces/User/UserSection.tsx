@@ -10,7 +10,7 @@ export async function UserSection() {
           width={300}
           height={300}
           alt="Photo"
-          className="lg:w-[300px] lg:h-[300px] sm:w-[200px] sm:h-[200px] w-[150px] h-[150px] rounded-full border-[2px] border-text-primary"
+          className="lg:w-[300px] lg:h-[300px] sm:w-[200px] sm:h-[200px] w-[150px] h-[150px] rounded-full border-[2px] border-text-primary bg-bg-light"
         />
         <h2 className="min-[1210px]:text-3xl min-[610px]:text-xl text-lg mb-[20px] text-text-primary font-bold text-justify">
           {Name}
