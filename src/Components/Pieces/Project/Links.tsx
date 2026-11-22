@@ -1,7 +1,7 @@
 import { Mobile, Project, Web } from "@/Model/@Types";
 import { LinkStyle } from "../Shared/Link";
 
-export async function Links({
+export function Links({
   Repository,
   URL,
   Download,

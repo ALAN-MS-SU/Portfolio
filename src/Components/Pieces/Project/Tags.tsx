@@ -1,20 +1,14 @@
 import { Project } from "../../../Model/@Types";
 import { Table } from "@/Components/Pieces";
-import { BiSolidLike } from "react-icons/bi";
-import { BiSolidDislike } from "react-icons/bi";
 import { IoPersonSharp } from "react-icons/io5";
 import { IoPeopleSharp } from "react-icons/io5";
-export async function Tags({
-  Type,
+export function Tags({
   Features,
   Year,
   Technology,
-  API,
+  Plat,
   Team,
-}: Pick<
-  Project,
-  "Type" | "Year" | "Technology" | "API" | "Team" | "Features"
->) {
+}: Pick<Project, "Year" | "Technology" | "Team" | "Features" | "Plat">) {
   return (
     <div className="flex flex-row justify-center items-center mb-5 w-full">
       <div
@@ -31,10 +25,16 @@ export async function Tags({
               Ano do projeto <br />
               {Year}
             </p>
-            <p className="@2xl:text-lg @lg:text-[100%] text-[80%] font-bold flex items-center text-text-primary">
-              Projeto {Type}
+            <p className="@2xl:text-lg @lg:text-[100%] text-[80%] font-bold flex text-text-primary flex-col justify-center items-center">
+              Projeto contém:
+              <span className="capitalize">
+                {Plat.map((plat, index) => {
+                  if (Plat.length - 1 == index) return `${plat}`;
+                  return `${plat} | `;
+                })}
+              </span>
             </p>
-            <p className="@2xl:text-lg @lg:text-[100%] text-[80%] font-bold flex flex-col justify-center items-center text-text-primary">
+            <p className="@2xl:text-lg @lg:text-[100%] text-[80%] font-bold flex flex-col justify-center items-center text-text-primary @md:col-span-2 col-span-1">
               {Team ? `Tamanho da equipe: ${Team}` : "Projeto solo"}
               <span>
                 {Team ? (
@@ -44,20 +44,6 @@ export async function Tags({
                 ) : (
                   <IoPersonSharp
                     className={"@2xl:text-2xl @lg:text-xl text-lg text-yes"}
-                  />
-                )}
-              </span>
-            </p>
-            <p className="@2xl:text-lg @lg:text-[100%] text-[80%] font-bold flex flex-col justify-center items-center text-text-primary">
-              API
-              <span>
-                {API ? (
-                  <BiSolidLike
-                    className={"@2xl:text-2xl @lg:text-xl text-lg text-yes"}
-                  />
-                ) : (
-                  <BiSolidDislike
-                    className={"@2xl:text-2xl @lg:text-xl text-lg text-no"}
                   />
                 )}
               </span>

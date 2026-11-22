@@ -3,39 +3,33 @@ export class Project {
   Describe: string;
   Cover: string;
   Repository?: string;
-  Type: "Web" | "Mobile";
+  Plat: ("app"|"api"|"site")[];
   Photo: string;
-  Language: string;
   Features: string[];
   Year: string;
   Technology: string[];
-  API: boolean;
   Team: number | false;
   constructor(
     Name: string,
     Describe: string,
     Cover: string,
     Repository: string,
-    Type: "Web" | "Mobile",
+    Plat: ("app"|"api"|"site")[],
     Photo: string,
-    Language: string,
     Features: string[],
     Year: string,
     Technology: string[],
-    API: boolean,
     Team: number | false,
   ) {
     this.Name = Name;
     this.Describe = Describe;
     this.Cover = Cover;
-    this.Language = Language;
     this.Features = Features;
     this.Repository = Repository;
-    this.Type = Type;
+    this.Plat = Plat;
     this.Photo = Photo;
     this.Year = Year;
     this.Technology = Technology;
-    this.API = API;
     this.Team = Team;
   }
 }
@@ -45,14 +39,12 @@ export class Web extends Project {
     Name: string,
     Describe: string,
     Cover: string,
-    Language: string,
     Features: string[],
     Repository: string,
-    Type: "Web" | "Mobile",
+    Plat: ("app"|"api"|"site")[],
     Photo: string,
     Year: string,
     Technology: string[],
-    API: boolean,
     Team: number | false,
     URL?: string,
   ) {
@@ -61,13 +53,11 @@ export class Web extends Project {
       Describe,
       Cover,
       Repository,
-      Type,
+      Plat,
       Photo,
-      Language,
       Features,
       Year,
       Technology,
-      API,
       Team,
     );
     this.URL = URL;
@@ -79,14 +69,12 @@ export class Mobile extends Project {
     Name: string,
     Describe: string,
     Cover: string,
-    Language: string,
     Features: string[],
     Repository: string,
-    Type: "Web" | "Mobile",
+    Plat: ("app"|"api"|"site")[],
     Photo: string,
     Year: string,
     Technology: string[],
-    API: boolean,
     Team: number | false,
     Download?: string,
   ) {
@@ -95,13 +83,11 @@ export class Mobile extends Project {
       Describe,
       Cover,
       Repository,
-      Type,
+      Plat,
       Photo,
-      Language,
       Features,
       Year,
       Technology,
-      API,
       Team,
     );
     this.Download = Download;

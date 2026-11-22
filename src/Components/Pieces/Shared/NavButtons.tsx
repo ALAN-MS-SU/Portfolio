@@ -22,7 +22,7 @@ export function NavButtons({
             Text={Text ? Item : undefined}
             key={index}
             Mode={Mode}
-            className={`sm:w-[100px] sm:h-[60px] w-[70px] h-[40px] transition-all ease-in`}
+            className={`sm:w-[100px] sm:h-[60px] w-[70px] h-[40px] transition-all ease-in capitalize`}
             On={
               Filters.current.some((filter) => {
                 return filter === Item;
@@ -46,6 +46,10 @@ export function NavButtons({
               if (Mode == "OP") {
                 e.currentTarget.classList.toggle("opacity-50");
                 e.currentTarget.classList.toggle("opacity-100");
+              }
+              if (Mode == "CO") {
+                e.currentTarget.classList.toggle("ButtonOff");
+                e.currentTarget.classList.toggle("ButtonOn");
               }
             }}
           >

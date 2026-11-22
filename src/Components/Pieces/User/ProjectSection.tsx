@@ -5,15 +5,32 @@ import { RefObject, useRef, useState } from "react";
 import { Mobile, Web } from "@/Model/@Types";
 import { Button } from "../Shared/Button";
 import { IoCloseOutline } from "react-icons/io5";
+import { useRouter, useSearchParams } from "next/navigation";
+
 export function ViewProjects() {
-  const [Filter, SetFilter] = useState<string[]>([]);
+  const Query = Array.from(
+    useSearchParams()
+      .values()
+      .map((Value) => String(Value)),
+  );
+  const [Filter, SetFilter] = useState<string[]>(Query);
   const [Pagination, SetPagination] = useState<number>(0);
   const Filtered: (Mobile | Web)[] =
     Filter.length > 0
       ? projects.filter((Project) => {
           if (
             Filter.some((filter) => {
-              return filter === Project.Language;
+              return Project.Technology.some((Technology) => {
+                return Technology === filter;
+              });
+            })
+          )
+            return Project;
+          if (
+            Filter.some((filter) => {
+              return Project.Plat.some((Plat) => {
+                return Plat === filter;
+              });
             })
           )
             return Project;
@@ -41,12 +58,14 @@ export function ViewProjects() {
   }
   const Keys = Object.keys(FilterItems);
   function OpenFilter() {
+    document.body.classList.toggle("overflow-y-hidden");
     FilterOptions.current?.classList.toggle("hidden");
     FilterOptions.current?.classList.toggle("flex");
     Bg.current?.classList.toggle("hidden");
     Bg.current?.classList.toggle("block");
   }
-  const Filters: RefObject<string[]> = useRef([]);
+  const Filters: RefObject<string[]> = useRef(Query);
+  const Router = useRouter();
   return (
     <section className="flex flex-col items-center" id="Projects">
       <h1 className="text-6xl mb-[20px] font-bold">Projetos</h1>
@@ -60,11 +79,11 @@ export function ViewProjects() {
         <div
           ref={FilterOptions}
           className={
-            "fixed hidden flex-col justify-between bg-bg-light right-[calc(50%-300px)] top-[calc(50%-300px)] p-4 rounded-2xl @container w-150 h-150 overflow-scroll"
+            "fixed hidden flex-col justify-between bg-bg-light sm:right-[calc(50%-300px)] right-[calc(50%-150px)] top-[calc(50%-300px)] p-4 rounded-2xl @container sm:w-150 w-75 h-150 overflow-scroll"
           }
         >
           <IoCloseOutline
-            className="sticky text-no cursor-pointer bg-transparent border-no border-2 rounded-full hover:bg-no hover:text-text-secondary min-h-10 min-w-10 top-0 left-full transition-colors ease-in"
+            className="sticky text-no cursor-pointer bg-transparent border-no border-2 rounded-full hover:bg-no hover:text-text-secondary @sm:min-h-10 min-h-7 @sm:min-w-10 min-w-7 top-0 left-full transition-colors ease-in"
             onClick={OpenFilter}
           />
           {Object.values(FilterItems).map((items, index) => {
@@ -84,28 +103,60 @@ export function ViewProjects() {
               </div>
             );
           })}
-          <Button
-            Text="Filtrar"
-            className="mt-5"
-            onClick={() => {
-              const boxes = Array.from(document.querySelectorAll(".box"));
-              boxes.forEach((Box) => {
-                Box.classList.remove("animate-box-in");
-                Box.classList.add("animate-box-out");
-              });
-              OpenFilter();
-              setTimeout(() => {
+          <div className="flex flex-row justify-around">
+            <Button
+              Text="Limpar"
+              className="mt-5"
+              onClick={() => {
+                const boxes = Array.from(document.querySelectorAll(".box"));
                 boxes.forEach((Box) => {
-                  Box.classList.remove("animate-box-out");
-                  Box.classList.add("animate-box-in");
+                  Box.classList.remove("animate-box-in");
+                  Box.classList.add("animate-box-out");
                 });
-                SetFilter(Filters.current);
-              }, 500);
-            }}
-          />
+                OpenFilter();
+                setTimeout(() => {
+                  boxes.forEach((Box) => {
+                    Box.classList.remove("animate-box-out");
+                    Box.classList.add("animate-box-in");
+                  });
+                  Filters.current = [];
+                  SetFilter([]);
+                  SetPagination(0);
+                  Router.replace(`/#Projects`);
+                }, 500);
+              }}
+            />
+            <Button
+              Text="Filtrar"
+              className="mt-5"
+              onClick={() => {
+                const boxes = Array.from(document.querySelectorAll(".box"));
+                boxes.forEach((Box) => {
+                  Box.classList.remove("animate-box-in");
+                  Box.classList.add("animate-box-out");
+                });
+                OpenFilter();
+                setTimeout(() => {
+                  boxes.forEach((Box) => {
+                    Box.classList.remove("animate-box-out");
+                    Box.classList.add("animate-box-in");
+                  });
+                  SetFilter(Filters.current);
+                  SetPagination(0);
+                  Router.replace(
+                    `/?${Filters.current.map((filter, index) => {
+                      if (index == Filters.current.length - 1)
+                        return `${index}=${filter}`;
+                      return `${index}=${filter}&`;
+                    })}#Projects`,
+                  );
+                }, 500);
+              }}
+            />
+          </div>
         </div>
       </div>
-      {Boxes.length - 1 < 1 ? (
+      {Boxes.length < 1 ? (
         <h2 className="min-h-[470px] flex justify-center items-center text-5xl font-bold text-text-primary">
           Nada foi encontrado
         </h2>
