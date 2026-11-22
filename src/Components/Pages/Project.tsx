@@ -1,6 +1,6 @@
 "use client"
 import { projects } from "@/Constants";
-import { DescribeProject, Tags, Tittle, Links, LinkStyle } from "../Pieces";
+import { DescribeProject, Tags, Tittle, Links } from "../Pieces";
 import { Mobile, Web } from "@/Model/@Types";
 import { FaArrowLeftLong } from "react-icons/fa6";
 import { Button } from "../Pieces/Shared/Button";

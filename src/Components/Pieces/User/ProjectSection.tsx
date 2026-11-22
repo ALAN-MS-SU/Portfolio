@@ -5,14 +5,10 @@ import { RefObject, useRef, useState } from "react";
 import { Mobile, Web } from "@/Model/@Types";
 import { Button } from "../Shared/Button";
 import { IoCloseOutline } from "react-icons/io5";
-import { useRouter, useSearchParams } from "next/navigation";
+import { useRouter } from "next/navigation";
 
-export function ViewProjects() {
-  const Query = Array.from(
-    useSearchParams()
-      .values()
-      .map((Value) => String(Value)),
-  );
+export function ViewProjects({Query}:{Query:string[]}) {
+  
   const [Filter, SetFilter] = useState<string[]>(Query);
   const [Pagination, SetPagination] = useState<number>(0);
   const Filtered: (Mobile | Web)[] =

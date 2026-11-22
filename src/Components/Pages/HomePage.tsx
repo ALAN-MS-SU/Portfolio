@@ -6,7 +6,8 @@ import {
   UserSection,
   ViewProjects,
 } from "@/Components/Pieces";
-export async function HomePage() {
+export async function HomePage({Query}:{Query:string[]}) {
+  
   return (
     <>
       <Header />
@@ -14,7 +15,7 @@ export async function HomePage() {
       <HR />
       <Stack />
       <HR />
-      <ViewProjects />
+      <ViewProjects Query={Query} />
       <HR />
       <SocialMedia />
     </>
