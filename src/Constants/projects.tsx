@@ -79,7 +79,6 @@ export const projects: (Web | Mobile)[] = [
     Download:
       "https://github.com/ALAN-MS-SU/Etec-Calendar/releases/download/APK/Etec-Calendario.apk",
     Year: "2024",
-
     Team: false,
     Technology: ["cs", "dotnet", "git", "android", "apple", "visualstudio"],
   },
@@ -230,11 +229,11 @@ export const projects: (Web | Mobile)[] = [
 ];
 export const IconUrl = "https://go-skill-icons.vercel.app/api/icons?i=";
 export const FilterItems = {
-  languages: ["js", "cs"],
+  Linguagens: ["js", "cs"],
   Frameworks: ["nextjs", "dotnet", "nestjs", "tailwindcss", "reactnative"],
-  Types: ["site", "api", "app"],
-  Databases: ["postgres", "redis"],
-  Others: [
+  Tipos: ["site", "api", "app"],
+  Bancos: ["postgres", "redis"],
+  Outros: [
     "git",
     "github",
     "docker",

@@ -91,7 +91,7 @@ export function ViewProjects({Query}:{Query:string[]}) {
                 <span className="text-center font-bold w-full mb-5">
                   {Keys[index]}
                 </span>
-                {Keys[index] == "Types" ? (
+                {Keys[index] == "Tipos" ? (
                   <NavButtons Values={items} Text Filters={Filters} />
                 ) : (
                   <NavButtons Values={items} Mode="OP" Filters={Filters} />
